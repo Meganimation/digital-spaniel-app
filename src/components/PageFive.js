@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Heading from './Heading'
 import CardLinkConmponent from './CardLinkComponent'
+import Collage from './Collage'
 
 
 
@@ -10,7 +11,7 @@ const PageFiveWrapper = styled.div `
 position: inherit; 
 background: lightBlue;
 width: 100%;
-height: 100vh;
+height: 80vh;
   ` 
 
 
@@ -21,18 +22,53 @@ background: white;
 display: block;
 ` 
 
+const ImageWrapper = styled.div `
+position: absolute;
+
+  img:{
+padding-left: 400px;
+}
+`
+
 
 const LinkWrapper = styled.div `
 
 padding-left: 300px;
+position: relative;
+
+
+width: 20%;
+
+  
+a{
+
+  padding-right: 50px;
+}
 ` 
+
+const CollageWrapper = styled.div `
+
+padding-left: 290px;
+max-height: 100%;
+width: auto;
+
+
+` 
+
+
+
+
+
 
 function PageFive() {
   return (<>
     <PageFiveWrapper > 
       <HeadingWrapper> 
-       <Heading title={"What are we all about?"}/> ayyyy 
+       <Heading title={"What are we all about?"}/> 
        </HeadingWrapper>
+       <CollageWrapper >
+      <Collage />
+      </CollageWrapper>
        <LinkWrapper >
        <CardLinkConmponent link={"About"}/>
        <CardLinkConmponent link={"Careers"}/>

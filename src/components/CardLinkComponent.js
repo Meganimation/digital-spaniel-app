@@ -8,16 +8,30 @@ function CardLinkComponent(props) {
 
 
     const CardLink= styled.a`
-  font-family: Open Sans; 
+    font-family: monospace;
+  text-decoration: none;
   font-size: 20px;
   color: #19293A;
   line-height: 160%;
-  text-decoration-color: red;
   padding-left: ${(props.padding ? "300px" : "0px")}; 
+    display: inline-block;
 
-&:hover {
-    text-decoration-color: black;
+&:after {
+    text-decoration-color: red;
+    border-bottom: solid 2px red;
+    display: block;
+    content: '';
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:100% 50%
   }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin:0 50%;
+  };
+
+
 ` 
 
     return (

@@ -14,22 +14,30 @@ import Footer from './components/Footer'
 import { CarouselData }from './components/CarouselData';
 
 
+
 export const TestContext = createContext()
 
 
 
 const GlobalStyle = createGlobalStyle`
+
+
   body {
+    font-family: 'Open Sans', sans-serif;
 
   }
 
   h1:first-line {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
     font-size: 48px
     font-family: Avant Garde Gothic Pro;
     color: #19293A;
   }
 
   h1 {
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
     font-size: 48px
     font-family: Avant Garde Gothic Pro;
     color: #506473;
@@ -38,12 +46,19 @@ const GlobalStyle = createGlobalStyle`
 
 
 
+const AppWrapper = styled.div `
+overflow-x: hidden;
+
+  ` 
+
+
 const PageWrapper = styled.div `
+
   ` 
 
 function App(name) {
   return (
-    <>
+    <AppWrapper>
     <GlobalStyle />
     <TestContext.Provider value={name} >
       <Navbar />
@@ -62,7 +77,7 @@ function App(name) {
      <PageTwo title="We’re a brands best friend" text={false} link="Let's Talk" pageTwo={false} />
      <Footer />
     </TestContext.Provider>
-    </>
+    </AppWrapper>
   );
 }
 

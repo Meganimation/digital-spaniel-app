@@ -25,6 +25,9 @@ background: yellow;
 float: right;
 width ${(props.pageTwo ? "25%" : "17%")}; 
 height: 75vh;
+color: #19293A;
+font-size: 21px;
+letter-spacing: 2.1px;
 `
 
     if (props.pageTwo) {
@@ -45,13 +48,13 @@ height: 75vh;
         <Row>
 
         <Column span='3'>
-        <LinkBlockComponent title={"QUESTIONS?"} link={["Call Us", "Email Us"]} />
+        <LinkBlockComponent title={"QUESTIONS?"} link={["Call Us", "0121 345 678", "Email Us", "info@digitalspaniel.co.uk"]} />
         </Column>
         <Column span='1'>
-          <LinkBlockComponent title={"EXPLORE"} link={["Sevices", "Work", "About", "Blog", "Career"]} />
+        <LinkBlockComponent title={"SERVICES"} link={["Brand", "Development",  "Marketing"]} />
         </Column>
         <Column span='2'>
-        <LinkBlockComponent title={"SERVICES"} link={["Brand", "Development",  "Marketing"]} />
+        <LinkBlockComponent title={"EXPLORE"} link={["Sevices", "Work", "About", "Blog", "Career"]} />
         </Column>
         </Row>
 

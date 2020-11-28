@@ -14,35 +14,22 @@ width: 100%;
 height: 75vh;
   ` 
 
-  const CardWrapper = styled.div`
-  width: 50%;
-  padding-top: 178px;
-  `
 
 
-  const Row = styled.div`
-  padding-left: 77px;
-  &::after {
-  content: ""
-  clear: both;
-  width: 50%;
-  display: table;
-  }
-  `
 
-  const Column = styled.div`
-  background: yellow;
-  float: right;
-  width: 25%;
-  height: 75vh;
-
-  `
 
 
 function PageTwo(props) {
+
+  const CardWrapper = styled.div`
+  width: 50%;
+  padding-top: 178px;
+  padding-top: ${props.pageTwo ? '178px' : '0'};
+  `
+
   return (
     <PageTwoWrapper>
-    <NavColumns pageTwo={props.pageTwo}/>
+    <NavColumns pageTwo={props.pageTwo}  />
 
       <CardWrapper>
       <Card 
