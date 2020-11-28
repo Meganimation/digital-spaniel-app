@@ -8,33 +8,28 @@ LinkBlockComponent.defaultProps = {
   }
 
 
-  const Link = styled.a `
+const Link = styled.a `
   color: #506473;
-
   span {
-    opacity: 0%
-}
-
-}
-
+    opacity: 0%;
+    }
+   
   &:hover {
       color: #506493;
 
       span {
           opacity: 100%
-      }
-  }
-
-  `
+           }
+    }
+`
 
 
 function LinkBlockComponent(props) {
     return (
-        <div>
+        <>
             <h3>{props.title}</h3>
-    <a>{props.link.map((link) => {return <Link><p>{link}<span> <FaBeer/></span></p></Link>})}</a>
-            
-        </div>
+            <a>{props.link.map((link) => {return <Link><p>{link}<span> <FaBeer/></span></p></Link>})}</a>       
+        </>
     )
 }
 

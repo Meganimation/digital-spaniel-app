@@ -10,7 +10,6 @@ import PageFour from './components/PageFour'
 import PageFive from './components/PageFive'
 import PageSix from './components/PageSix'
 import Footer from './components/Footer'
-
 import { CarouselData }from './components/CarouselData';
 
 
@@ -21,10 +20,8 @@ export const TestContext = createContext()
 
 const GlobalStyle = createGlobalStyle`
 
-
   body {
     font-family: 'Open Sans', sans-serif;
-
   }
 
   h1:first-line {
@@ -42,45 +39,38 @@ const GlobalStyle = createGlobalStyle`
     font-family: Avant Garde Gothic Pro;
     color: #506473;
   }
-`
+  `
 
 
 
 const AppWrapper = styled.div `
-overflow-x: hidden;
+  overflow-x: hidden;
+` 
 
-  ` 
-
-
-const PageWrapper = styled.div `
-
-  ` 
 
 function App(name) {
+
   return (
     <AppWrapper>
     <GlobalStyle />
     <TestContext.Provider value={name} >
-      <Navbar />
-      <PageWrapper>
-       <PageOne/>
-       <PageTwo title={"What are we capable of"} 
-       text={'By focusing on design as an enabler and putting a huge emphasis on our clients as co-producers, we create innovative, sustainable marketing that enhances brand experience and user engagement.'}
-       link={"Our Process"} 
-       pageTwo={true}
-       />
-       <PageThree />
-       <PageFour slides={CarouselData}/>
-       <PageFive />
-       <PageSix />
-      </PageWrapper >
-     <PageTwo title="We’re a brands best friend" text={false} link="Let's Talk" pageTwo={false} />
-     <Footer />
+        <Navbar />
+            <PageOne/>
+            <PageTwo title={"What are we capable of"} 
+            text={'By focusing on design as an enabler and putting a huge emphasis on our clients as co-producers, we create innovative, sustainable marketing that enhances brand experience and user engagement.'}
+            link={"Our Process"} 
+            pageTwo={true}
+            />
+            <PageThree />
+            <PageFour slides={CarouselData}/>
+            <PageFive />
+            <PageSix />
+            <PageTwo title="We’re a brands best friend" text={false} link="Let's Talk" pageTwo={false} />
+            <Footer />
     </TestContext.Provider>
     </AppWrapper>
   );
 }
-
 
 
 App.defaultProps = {

@@ -2,16 +2,16 @@ import React from 'react'
 
 
 ImageCard.defaultProps = {
-    imagesource: 'defaulttttt'
+    imagesource: 'This is the ImageCard default prop.'
   }
 
 
 function ImageCard(props) {
   
     return (
-        <p>
-            {props.imagesource.map((image) => {return <li><img src={image} alt={"test"} /></li>})}
-        </p>
+        <>
+            {props.imagesource.map((image) => {return <li><img src={image} alt={"image-card"} /></li>})}
+        </>
     )
 }
 

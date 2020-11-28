@@ -5,7 +5,7 @@ import { device } from './Breakpoints';
 
 
 Heading.defaultProps = {
-    title: 'This is the default title for the Card'
+    title: 'This is the default title for the Heading'
   }
 
 
@@ -25,8 +25,8 @@ const HeadingWrapper = styled.div `
 ` 
 
 const HeadingTitle = styled.h1 `
-font: ITC Avant Garde Gothic Pro, Bold;
-font-size: 48px;
+  font: ITC Avant Garde Gothic Pro, Bold;
+  font-size: 48px;
 ` 
 
 
@@ -36,7 +36,7 @@ font-size: 48px;
 function Heading(heading) {
     return (
     <HeadingWrapper>
-    <HeadingTitle>{heading.title}</HeadingTitle>
+      <HeadingTitle>{heading.title}</HeadingTitle>
     </HeadingWrapper>
     )
 }

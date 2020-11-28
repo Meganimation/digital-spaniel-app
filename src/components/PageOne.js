@@ -5,16 +5,16 @@ import { device } from './Breakpoints';
 
 
 
-  const RedText= styled.p `
+const RedText= styled.p `
     padding-left: 300px;
 ` 
 
 
-  const PageOneWrapper = styled.div `
+const PageOneWrapper = styled.div `
     height: 86vh;
-  ` 
+` 
 
-  const LeftSide = styled.div `
+const LeftSide = styled.div `
     position: absolute;
     top:0;
     left: 50%;
@@ -27,18 +27,18 @@ import { device } from './Breakpoints';
          height: 100%;
          width: 100%;
         }
-    ` 
+` 
 
-  const RightSide = styled.div `
+const RightSide = styled.div `
     position: absolute;
     top:0;
     right: 50%;
     width: 50%;
     height: 100vh;
     z-index: 1;
-      ` 
+` 
 
-  const CardWrapper = styled.div `
+const CardWrapper = styled.div `
 
   @media ${device.laptop} { 
     padding-top: 30vh;
@@ -46,15 +46,14 @@ import { device } from './Breakpoints';
 
   @media ${device.desktop} { 
     padding-top: 381px;
-    }  ` 
+    }  
+` 
 
       
 
 
 function PageOne() {
 
-
-    
     return (
     <>
         <PageOneWrapper>

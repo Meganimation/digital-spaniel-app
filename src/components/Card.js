@@ -16,14 +16,11 @@ Card.defaultProps = {
 
 const CardWrapper = styled.div `
 
-
-
 @media ${device.laptop} { 
     padding-left: 20vh;
     padding-right: 20vh;
     position: relative;
   }
-
 
 @media ${device.desktop} { 
     padding-left: 300px;

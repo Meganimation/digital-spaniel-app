@@ -6,9 +6,8 @@ import styled from 'styled-components'
 
 function CardLinkComponent(props) {
 
-
-    const CardLink= styled.a`
-    font-family: monospace;
+  const CardLink= styled.a`
+ 
   text-decoration: none;
   font-size: 20px;
   color: #19293A;
@@ -23,15 +22,13 @@ function CardLinkComponent(props) {
     content: '';
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
-    transform-origin:100% 50%
+    transform-origin:100% 50%;
   }
 
   &:hover:after {
     transform: scaleX(1);
     transform-origin:0 50%;
   };
-
-
 ` 
 
     return (
