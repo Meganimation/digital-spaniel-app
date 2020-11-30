@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import BodyText from './BodyText'
 import Heading from './Heading'
-import { CarouselData }					  from './CarouselData';
 
 
 

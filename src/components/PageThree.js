@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import CardLinkComponent from './CardLinkComponent'
 import Heading from './Heading'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import FlipCardsComponent from './FlipCardsComponent'
+import FlipCardsComponent2 from './FlipCardsComponent2'
 
 
 
@@ -17,12 +20,12 @@ const HeadingWrapper = styled.div `
 ` 
 
 const PageThreeNav = styled.nav `
-  width: 50%;
+  width: 25%;
   padding-left: 300px;
   font-size: 20px;
-  display: inline-block;
   text-align: center;
   padding-bottom: 25px;
+  text-decoration: none;
 
   a{
     display: inline-block;
@@ -43,7 +46,6 @@ const Button = styled.button`
     width: 25%;
     text-align: center;
     background: white;
-    text-decoration-color: lightGray;
     border: solid 0px white;
     border-bottom: solid 1px lightGray;
 
@@ -55,22 +57,11 @@ const Button = styled.button`
       }
 `
 
-const RowOne = styled.div`
-  padding-left: 300px;
+const NavWrapper = styled.div`
+padding-right: 300px;
+padding-left: 300px;
 `
 
-const RowTwo = styled.div`
-  padding-left: 300px;
-  padding-bottom: 78px;
-`
-
-const Image = styled.img`
-   margin: 1vh;
-
-  &:hover{
-    opacity: 20%;
-  }
-`
 
 
 function PageThree() {
@@ -79,25 +70,29 @@ function PageThree() {
       <HeadingWrapper>
         <Heading title={'Some of our // recent projects'} />
       </HeadingWrapper>
-    <PageThreeNav> 
+    <PageThreeNav />
+    <br/>
         {/* <a href="#All">All</a>
         <a href="#Branding">Branding</a>
         <a href="#WebDesign">Web Design</a>
         <a href="#DigitalMarketing">Digital Marketing</a> */}
-        <Button>All</Button>
-        <Button>Branding</Button>
-        <Button>Web Design</Button>
-        <Button>Digital Marketing</Button>
-    </PageThreeNav>
-    <RowOne>
-        <Image src="whellies01.png" alt="whellies" />
-        <Image src="newspaper02.png" alt="whellies" />  
-        <Image src="makerek.png" alt="whellies" />
-    </RowOne>
-    <RowTwo>
-        <Image src="newspaper.png" alt="whellies" />
-        <Image src="rider01.png" alt="whellies" />
-    </RowTwo>
+
+        <Router>
+      <>
+      <NavWrapper>
+      <Button> <Link to='/' style={{color: 'black', textDecoration: 'none'}}> All  </Link> </Button>
+      <Button> <Link to='/otherPage' style={{color: 'black', textDecoration: 'none'}}> Branding  </Link> </Button>
+      <Button> <Link to='/otherPage' style={{color: 'black', textDecoration: 'none'}}> Web Design  </Link> </Button>
+      <Button> <Link to='/otherPage' style={{color: 'black', textDecoration: 'none'}}> Digital Marketing  </Link> </Button>
+      </NavWrapper>
+            <Switch>
+              <Route exact path='/' component={FlipCardsComponent} />
+              <Route exact path='/otherPage' component={FlipCardsComponent2}  />
+            </Switch>
+      </>
+    </Router>
+
+
         <CardLinkComponent link={"See all work"} padding={true} />
   </PageThreeWrapper>
   )
