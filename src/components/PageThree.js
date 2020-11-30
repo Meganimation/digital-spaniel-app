@@ -17,21 +17,43 @@ const HeadingWrapper = styled.div `
 ` 
 
 const PageThreeNav = styled.nav `
-  width: 70%;
+  width: 50%;
   padding-left: 300px;
   font-size: 20px;
-  text-decoration: underline;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 25px;
 
   a{
-
-  margin-right: 5%;
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-decoration: none;
+   color: #19293A;
 
   &:hover{
     font-weight:bold;
-    text-decoration-color: purple;
   }
 }
 ` 
+
+const Button = styled.button`
+    font-family: Open Sans;
+    font-size: 20px;
+    width: 25%;
+    text-align: center;
+    background: white;
+    text-decoration-color: lightGray;
+    border: solid 0px white;
+    border-bottom: solid 1px lightGray;
+
+    &:hover{
+      border-bottom: solid 1px red;
+      pointer: cursor;
+      font-weight: 600;
+    }
+      }
+`
 
 const RowOne = styled.div`
   padding-left: 300px;
@@ -50,26 +72,22 @@ const Image = styled.img`
   }
 `
 
-const ImageBack= styled.div`
-  position: relative;
-  z-index: -1;
-  top: -455px;
-  display: inline-block;
-  background: red;
-`
-
 
 function PageThree() {
   return (
   <PageThreeWrapper> 
       <HeadingWrapper>
-        <Heading title={'Some of our recent projects'} />
+        <Heading title={'Some of our // recent projects'} />
       </HeadingWrapper>
     <PageThreeNav> 
-        <a href="#All">All</a>
+        {/* <a href="#All">All</a>
         <a href="#Branding">Branding</a>
         <a href="#WebDesign">Web Design</a>
-        <a href="#DigitalMarketing">Digital Marketing</a>
+        <a href="#DigitalMarketing">Digital Marketing</a> */}
+        <Button>All</Button>
+        <Button>Branding</Button>
+        <Button>Web Design</Button>
+        <Button>Digital Marketing</Button>
     </PageThreeNav>
     <RowOne>
         <Image src="whellies01.png" alt="whellies" />

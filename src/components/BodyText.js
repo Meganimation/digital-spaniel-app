@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaBeer } from 'react-icons/fa';
+import { device } from './Breakpoints';
 
 
 BodyText.defaultProps = {
@@ -11,8 +11,8 @@ BodyText.defaultProps = {
 function BodyText(props) {
 
 
-const BodyTextWrapper= styled.p `
-  padding-top: ${(props.padding ? "50px" : "0px")}; 
+const BodyTextWrapper= styled.section `
+  padding-top: ${(props.padding ? "20px" : "0px")}; 
   font: Open Sans;
   font-size: 21px;
   color: #506473;

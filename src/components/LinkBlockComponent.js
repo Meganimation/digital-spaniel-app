@@ -10,12 +10,14 @@ LinkBlockComponent.defaultProps = {
 
 const Link = styled.a `
   color: #506473;
+
   span {
     opacity: 0%;
     }
    
   &:hover {
       color: #506493;
+      cursor: pointer;
 
       span {
           opacity: 100%
@@ -23,12 +25,16 @@ const Link = styled.a `
     }
 `
 
+const LinkBlockHeading = styled.h3`
+font-family: normal normal bold 21px/38px ITC Avant Garde Gothic Pro;
+`
+
 
 function LinkBlockComponent(props) {
     return (
         <>
-            <h3>{props.title}</h3>
-            <a>{props.link.map((link) => {return <Link><p>{link}<span> <FaBeer/></span></p></Link>})}</a>       
+            <LinkBlockHeading>{props.title}</LinkBlockHeading>
+            <a>{props.link.map((link) => {return<p><Link>{link}<span> <FaBeer/></span></Link></p>})}</a>       
         </>
     )
 }

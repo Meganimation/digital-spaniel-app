@@ -13,11 +13,12 @@ function CardLinkComponent(props) {
   color: #19293A;
   line-height: 160%;
   padding-left: ${(props.padding ? "300px" : "0px")}; 
-    display: inline-block;
+  display: inline-block;
+  font: normal normal 600 20px/27px Open Sans;
 
 &:after {
     text-decoration-color: red;
-    border-bottom: solid 2px red;
+    border-bottom: solid 4px red;
     display: block;
     content: '';
     transform: scaleX(0);  

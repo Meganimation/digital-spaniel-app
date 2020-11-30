@@ -7,7 +7,6 @@ import RefCard from './RefCard'
 
 const PageSixWrapper = styled.div `
   position: inherit; 
-  background: red;
   width: 100%;
   height: 100vh;
   padding-right: 300px;
@@ -46,8 +45,11 @@ const Button = styled.button `
   height: 34px;
   width: 34px;
   border-radius: 20px;
+  border: 2px darkGray;
+  background: #C5CACE;
 
   &:hover{
+    cursor: pointer;
     background: #19293A;
   }
 ` 
@@ -57,7 +59,7 @@ const Button = styled.button `
     <PageSixWrapper >  
     <HeadingWrapper> 
         <Heading 
-        title={"Kind words from our client"}/> 
+        title={"Kind words // from our client"}/> 
         </HeadingWrapper> 
     <RefCardWrapper>
         <RefCard 
@@ -85,10 +87,10 @@ const Button = styled.button `
         text={"We needed a creative and unique brand which could compete against established products. Digital Spaniel delivered in spades and we’ve seen a huge response to the product launch."}
         /> 
     </RefCardWrapper >
-    <ButtonWrapper   >
-        <Button style={{background: activeButton[0] ? "#19293A" : "#C5C9CD"}} onClick={()=>{setActiveButton([!activeButton[0], false, false])}}/> 
-        <Button style={{background: activeButton[1] ? "#19293A" : "#C5C9CD"}} onClick={()=>{setActiveButton([false, !activeButton[1], false])}}/> 
-        <Button style={{background: activeButton[2] ? "#19293A" : "#C5C9CD"}} onClick={()=>{setActiveButton([false, false, !activeButton[2]])}}/> 
+    <ButtonWrapper >
+        <Button onClick={()=>{setActiveButton([!activeButton[0], false, false])}}/> 
+        <Button onClick={()=>{setActiveButton([false, !activeButton[1], false])}}/> 
+        <Button onClick={()=>{setActiveButton([false, false, !activeButton[2]])}}/> 
     </ButtonWrapper >
   
       </PageSixWrapper>

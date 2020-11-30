@@ -25,18 +25,33 @@ const HeadingWrapper = styled.div `
 ` 
 
 const HeadingTitle = styled.h1 `
-  font: ITC Avant Garde Gothic Pro, Bold;
-  font-size: 48px;
+
+font-size: 48px;
 ` 
 
 
-
+function checkHeading(heading) {
+  function splitHeading(heading) {
+    let x = heading.split(" // ")
+    let y = x[0] + <br /> + x[1]
+    debugger
+    return (
+      <>
+      {x[0]} <br />
+      {x[1]}
+      </>
+      
+    )
+  }
+  
+ return heading.includes("//") ? splitHeading(heading) : heading
+}
 
 
 function Heading(heading) {
     return (
     <HeadingWrapper>
-      <HeadingTitle>{heading.title}</HeadingTitle>
+      <HeadingTitle>{checkHeading(heading.title)}</HeadingTitle>
     </HeadingWrapper>
     )
 }

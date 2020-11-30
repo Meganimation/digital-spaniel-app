@@ -25,16 +25,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1:first-line {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 48px
-    font-family: Avant Garde Gothic Pro;
+    font: ITC Avant Garde Gothic Pro, Bold;
     color: #19293A;
   }
 
   h1 {
     font-weight: 500;
-    font-family: 'Open Sans', sans-serif;
     font-size: 48px
     font-family: Avant Garde Gothic Pro;
     color: #506473;
@@ -56,7 +54,7 @@ function App(name) {
     <TestContext.Provider value={name} >
         <Navbar />
             <PageOne/>
-            <PageTwo title={"What are we capable of"} 
+            <PageTwo title={"What are // we capable of"} 
             text={'By focusing on design as an enabler and putting a huge emphasis on our clients as co-producers, we create innovative, sustainable marketing that enhances brand experience and user engagement.'}
             link={"Our Process"} 
             pageTwo={true}

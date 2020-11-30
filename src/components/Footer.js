@@ -5,10 +5,11 @@ import { TestContext } from '../App'
 
 const FooterWrapper = styled.div `
   position: inherit; 
-  background: black;
   width: 100%;
-  height: 28px;
-  color: white;
+  height: 64px;
+  color: #50647380;
+  background: #EDEFF1;
+  padding-left: 300px;
 ` 
 
 function Footer() {

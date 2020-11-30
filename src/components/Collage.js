@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { device } from './Breakpoints';
 
 
 
@@ -30,7 +31,6 @@ const Row = styled.div`
 `
   
 const Column = styled.div`
-  background: yellow;
   float: left;
   color: #19293A;
   font-size: 21px;
@@ -50,7 +50,7 @@ function Collage() {
             </Column>
             <Column span='2'>
                 <Item src="office03.png" alt="office" />
-                <Item style={{paddingLeft: '27%'}} src="office04.png" alt="office" />
+                <Item style={{paddingLeft: '27%', paddingTop: '3%'}} src="office04.png" alt="office" />
             </Column>
             <Column span='2'>
                 <Item src="office02.png" alt="office" />

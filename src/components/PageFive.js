@@ -8,9 +8,10 @@ import Collage from './Collage'
 
 const PageFiveWrapper = styled.div `
   position: inherit; 
-  background: lightBlue;
+  background: #EDEFF1;
   width: 100%;
   height: 80vh;
+
 ` 
   
   
@@ -54,7 +55,7 @@ function PageFive() {
   return (
     <PageFiveWrapper > 
           <HeadingWrapper> 
-                <Heading title={"What are we all about?"}/> 
+                <Heading title={"What are // we all about?"}/> 
           </HeadingWrapper >
           <CollageWrapper >
                 <Collage />

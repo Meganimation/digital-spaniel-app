@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import CardLinkComponent from './CardLinkComponent'
 
 
 
 const LogoWrapper = styled.div `
- padding-left: 20vh;
+ padding-left: 300px;
  padding-top 34px;
  display: inline-block;
 ` 
@@ -18,7 +19,7 @@ const LogoImg = styled.img `
 
 const Nav = styled.nav `
  float: right;
- padding-top: 63px;
+ padding-top 34px;
  text-align: center;
  width: 50%;
 
@@ -28,14 +29,17 @@ const Nav = styled.nav `
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-      }
       
       &:active {
         color: red;
       }
+
+      &:after {
+        text-decoration-color: white;
+        border-bottom: solid 4px white;
+      }
+
+      
    }
 `
 
@@ -47,11 +51,11 @@ function Navbar() {
                 <LogoImg src="logo.png"  alt="logo"/> 
             </LogoWrapper>
     <Nav> 
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+        <CardLinkComponent href="#services" link="Services" /> 
+        <CardLinkComponent href="#work" link="Work" /> 
+        <CardLinkComponent href="#about" link="About" /> 
+        <CardLinkComponent href="#blog" link="Blog" />
+        <CardLinkComponent href="#contact" link="Contact" /> 
     </Nav>
 </NavbarWrapper>
     )

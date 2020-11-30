@@ -17,9 +17,7 @@ function PageFour(props) {
 
 const PageFourWrapper = styled.div `
     position: inherit; 
-    background: green;
     width: 100%;
-    height: 100vh;
 ` 
   
 const TextHeader = styled.div `

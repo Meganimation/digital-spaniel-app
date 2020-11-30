@@ -7,6 +7,7 @@ import CardLinkConmponent from './CardLinkComponent'
 
 
 
+
 Card.defaultProps = {
     title: 'This is the default title for the Card',
     text: 'This is the default text for the card',
@@ -14,7 +15,7 @@ Card.defaultProps = {
   }
 
 
-const CardWrapper = styled.div `
+const CardWrapper = styled.section `
 
 @media ${device.laptop} { 
     padding-left: 20vh;
@@ -31,8 +32,10 @@ const CardWrapper = styled.div `
 
 
 
+
 function Card(card) {
-    return (<>
+    return (
+      <>
     <Heading title={card.title}/>
     <CardWrapper>
     <BodyText text={card.text} padding={true} />       
