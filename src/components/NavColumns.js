@@ -1,13 +1,25 @@
 import React from 'react'
 import LinkBlockComponent from './LinkBlockComponent'
 import styled from 'styled-components'
+import { device } from './Breakpoints';
 
 function NavColumns(props) {
 
 
 const Row = styled.div`
-  padding-left: 77px;
-  padding-right: 228px;
+
+  @media ${device.laptop} { 
+    padding-left: 1vh;
+    padding-right: 30vh; 
+    line-height: 1.3;
+  }
+
+  @media ${device.desktop} { 
+    padding-left: 77px;
+    padding-right: 228px; 
+    line-height: 1.5;
+}
+
   &::after {
   content: ""
   clear: both;
@@ -19,11 +31,18 @@ const Row = styled.div`
 const Column = styled.div`
   float: right;
   width ${(props.pageTwo ? "25%" : "17%")}; 
-  height: 75vh;
+
   color: #19293A;
   font-size: 21px;
   letter-spacing: 2.1px;
-  padding-top: 200px;
+
+  @media ${device.laptop} { 
+    padding-top: 10vh;
+  }
+
+  @media ${device.desktop} { 
+    padding-top: 200px;
+  }
 `
 
     if (props.pageTwo) {

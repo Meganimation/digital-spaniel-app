@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaBeer } from 'react-icons/fa';
+import { device } from './Breakpoints';
 
 
 LinkBlockComponent.defaultProps = {
@@ -10,6 +11,14 @@ LinkBlockComponent.defaultProps = {
 
 const Link = styled.a `
   color: #506473;
+  @media ${device.laptop} { 
+    font-size: 2vh;
+    
+  }
+
+  @media ${device.desktop} { 
+    font-size: 25px;
+  }
 
   span {
     opacity: 0%;

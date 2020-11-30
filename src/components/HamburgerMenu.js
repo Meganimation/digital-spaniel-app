@@ -35,7 +35,7 @@ opacity: 90%;
           text-decoration: none;
           font: normal normal 600 38px/58px Open Sans;
           display: inline-block;
-          line-height: 20vh;
+          line-height: 10vh;
           top: 8vh;
           z-index: 999;
           opacity: 1;
@@ -61,10 +61,17 @@ const LinkWrapper = styled.div`
 
 `
 
+const Item = styled.img`
+max-width: 50%;
+height: auto;
+padding-top: 10vh;
+`
+
 
 function HamburgerMenu() {
     return (
         <HamburgerMenuWrapper>
+            <Item src="logo.png" alt='logo' />
             <LinkWrapper >
             <ul><a href="#test"> Services </a></ul>
             <ul> <a href="#test"> Work </a></ul>

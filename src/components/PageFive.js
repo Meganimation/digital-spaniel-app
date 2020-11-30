@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Heading from './Heading'
 import CardLinkConmponent from './CardLinkComponent'
 import Collage from './Collage'
+import { device } from './Breakpoints';
 
 
 
@@ -10,7 +11,9 @@ const PageFiveWrapper = styled.div `
   position: inherit; 
   background: #EDEFF1;
   width: 100%;
-  height: 80vh;
+  height: 100%;
+
+  padding-bottom: 18vh;
 
 ` 
   
@@ -41,9 +44,20 @@ const LinkWrapper = styled.div `
 ` 
   
 const CollageWrapper = styled.div `  
-  padding-left: 290px;
-  max-height: 100%;
-  width: auto;  
+
+  @media ${device.laptop} { 
+    padding-left: 50vh;
+    padding-right: 29vh;
+    height: 100%;
+    width: auto;  
+  }
+
+  @media ${device.desktop} { 
+    padding-left: 290px;
+    padding-right: 0vh;
+    max-height: 100%;
+    width: auto;  
+  }
 ` 
 
 
@@ -60,10 +74,6 @@ function PageFive() {
           <CollageWrapper >
                 <Collage />
           </CollageWrapper >
-          <LinkWrapper >
-                <CardLinkConmponent link={"About"}/>
-                <CardLinkConmponent link={"Careers"}/>
-          </LinkWrapper >
       </PageFiveWrapper>
   )
 }

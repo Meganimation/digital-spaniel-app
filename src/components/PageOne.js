@@ -6,12 +6,19 @@ import { device } from './Breakpoints';
 
 
 const RedText= styled.p `
+
+    @media ${device.laptop} { 
+    padding-left: 20vh;
+    }
+
+    @media ${device.desktop} { 
     padding-left: 300px;
+    }
 ` 
 
 
 const PageOneWrapper = styled.div `
-    height: 86vh;
+    height: 100vh;
 ` 
 
 const LeftSide = styled.div `

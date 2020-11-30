@@ -1,8 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, createContext} from "react";
 import styled from 'styled-components'
 import Heading from './Heading'
 import RefCard from './RefCard'
+import { device } from './Breakpoints';
 
+
+export const refContext = createContext()
 
 
 const PageSixWrapper = styled.div `
@@ -20,8 +23,16 @@ const HeadingWrapper = styled.div `
 
 const RefCardWrapper = styled.div `
   display: flex;
+  @media ${device.laptop} { 
+    padding-left: 19vh;
+    padding-right: 19vh;
+    padding-top: 5vh;
+  }
+
+  @media ${device.desktop} { 
   padding-left: 226px;
   padding-top: 50px;
+  }
 ` 
 
 const ButtonWrapper = styled.div `
@@ -42,7 +53,6 @@ const PageSix= (props) => {
 const [activeButton, setActiveButton] = React.useState([false, false, false])
 
 const Button = styled.button `
-  text-align: center;
   text-decoration: none;
   font-size: 16px;
   margin: 0px 16px;
@@ -58,33 +68,54 @@ const Button = styled.button `
   }
 ` 
 
+function makeActive(e){
+ let id = this.id
+      switch (id) {   
+      case 1:
+        return (setActiveButton([!activeButton[0], false, false]));
+      
+      case 2:
+        return (setActiveButton([false, !activeButton[1], false]));
+      
+      case 3:
+        return (setActiveButton([false, false, !activeButton[2]]));
+      }
 
-  return (<>
+}
+
+  return (
+  <>
     <PageSixWrapper >  
     <HeadingWrapper> 
         <Heading 
         title={"Kind words // from our client"}/> 
         </HeadingWrapper> 
     <RefCardWrapper>
-        <RefCard 
+        <RefCard
+        id={1}
         active={activeButton[0]}
         activeButton={activeButton[0]}
+        makeActive={makeActive}
         name={"Paul Simon"}
         job={"Founder, MegaCorp"}
         image={"testimonial_face03.png"}
         text={"Working with Digital Spaniel has been a breath of fresh air. Their approach and attitude kept me informed and included from the start. Super pleased with the end results too!"}
         /> 
         <RefCard 
+        id={2}
         active={activeButton[1]}
         activeButton={activeButton[1]}
+        makeActive={makeActive}
         name={"Johnny B. Goode"}
         job={"CEO, Getting Things Done"}
         image={"testimonial_face01.png"}
         text={"Advice and support from DigiSpan was second to none. Always willing to help and offer advice and solutions. A very good and rapid understanding of our requirements was key to this."}
         /> 
         <RefCard 
+        id={3}
         active={activeButton[2]}
         activeButton={activeButton[2]}
+        makeActive={makeActive}
         name={"Mary Jane"}
         job={"CEO, Design Matters"}
         image={"testimonial_face02.png"}
@@ -103,4 +134,9 @@ const Button = styled.button `
 }
 
 export default PageSix
+
+
+PageSix.defaultProps = {
+  active: [false, false, false]
+}
 

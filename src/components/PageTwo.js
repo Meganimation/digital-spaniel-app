@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Card from './Card'
 import NavColumns from './NavColumns'
+import { device } from './Breakpoints';
 
 
 
@@ -11,6 +12,17 @@ const PageTwoWrapper = styled.div `
   width: 100%;
   height: 75vh;
   background: #EDEFF1;
+
+  @media ${device.laptop} { 
+    height: auto;
+    padding-bottom: 10vh;
+
+  }
+
+  @media ${device.desktop} { 
+    height: 75vh;
+    padding-bottom: 0vh;
+  }
 ` 
 
 const NavWrapper = styled.div`

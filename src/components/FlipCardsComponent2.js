@@ -19,21 +19,39 @@ const Image = styled.img`
   }
 `
 
+const Grid = styled.div`
+position: absolute;
+width: 100%;
+height: 80%;
+padding-left: 20vh;
+
+
+  `
+
+  const Row = styled.div`
+  display: flex;
+  background: yellow;
+  width: 70%;
+  height: 80%;
+  `
+
+  const TextContainer = styled.div`
+  padding-left: 20%;
+  padding-top: 20%;
+  font-size: 30px;
+  `
+
 
 function FlipCardsComponent2() {
     return (
         <>
-                <RowOne>
-                <Image src="makerek.png" alt="whellies" />
-        <Image src="whellies01.png" alt="whellies" />
-  
-   
-    </RowOne>
-    <RowTwo>
-    <Image src="newspaper02.png" alt="whellies" />  
-        <Image src="newspaper.png" alt="whellies" />
-        <Image src="rider01.png" alt="whellies" />
-    </RowTwo>
+          <Grid >
+            <Row>
+              <TextContainer>
+          This is a page accessed via the power of React-Router!
+          </TextContainer>
+            </Row>
+          </Grid>
         </>
     )
 }
