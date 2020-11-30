@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 48px
     font-family: Avant Garde Gothic Pro;
     color: #506473;
+    line-height: 1.0;
   }
   `
 

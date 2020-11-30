@@ -24,6 +24,10 @@ const borderAnimation = keyframes`
         background: ${!props.active ? '#19293A' : '#E2E4E6'};
         height: ${!props.active ? '748px;' : '663px;'};
         width: ${!props.active ? '536px;' : '434px;'};
+
+        p{
+            
+        }
   }
 }
 `
@@ -44,12 +48,16 @@ const textAnimation = keyframes`
 
 
 const nameAnimation = keyframes`
+
+
     50% {
   
     }
 
     100% {
         color: ${!props.active ? 'white' : '#19293A'};
+        font-size: ${props.active ? '19px' : '25px'};
+        }
     }
 }
 `
@@ -83,37 +91,76 @@ const RefCardShape = styled.div`
     margin-top: auto;
     margin-bottom: auto;
 
+    p {
+        font: italic normal 600 25px Open Sans;
+        text-align: center;
+        padding-left: 60px;
+        padding-right: 60px;
+        color: ${props.active ? '#E2E4E6' : '#19293A'};
+        padding-top: ${props.active ? '64px;' : '64px;'};
+        font-size: ${props.active ? '30px;' : '26px;'};
+        letter-spacing: 0px;
+    }
+
+    img {
+        padding-left: 40%;
+        max-width: 20%;
+    }
+
   &:hover{
     box-shadow: 0px 20px 40px #19293A80;
       cursor: pointer;
       animation: ${borderAnimationRule};
-  }
 
   p {
+    animation: ${textAnimationRule};
+  }
+
+  h6 {
+    animation: ${nameAnimationRule};
     color: ${props.active ? '#E2E4E6' : '#19293A'};
   }
-`
 
 
-const TextBox = styled.p`
-    font: italic normal 600 30px Open Sans;
-    color: ${props.active ? '#E2E4E6' : '#19293A'};
-    font-size: ${props.active ? '30px;' : '25px;'};
+  }
+
+
+
+  h6 {
     text-align: center;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: ${props.active ? '64px;' : '64px;'};
     letter-spacing: 0px;
+    color: ${props.active ? '#E2E4E6' : '#19293A'};
+    font-size: ${!props.active ? '25px' : '19px'};
+    font-weight: 100;
+    font: normal normal 17px/38px Open Sans;
 
-&:hover{
-      animation: ${textAnimationRule};
+    line-height: 1.6;
+
+
+    &:first-line {
+        padding-top: 16px;
+        font-weight: 800;
     }
+
 `
+
+
+// const TextBox = styled.p`
+//     font: italic normal 600 30px Open Sans;
+//     color: ${props.active ? '#E2E4E6' : '#19293A'};
+//     font-size: ${props.active ? '30px;' : '25px;'};
+//     text-align: center;
+//     padding-left: 60px;
+//     padding-right: 60px;
+//     padding-top: ${props.active ? '64px;' : '64px;'};
+//     letter-spacing: 0px;
+
+// &:hover{
+//       animation: ${textAnimationRule};
+//     }
+// `
 
 const DisplayImage = styled.img`
-    padding-top: 31px;
-    max-width: ${props.active ? 'none' : '35%'};
-    max-height: ${props.active ? 'none' : '35%'};
 `
 
 const DisplayImageWrapper = styled.div`
@@ -121,33 +168,19 @@ const DisplayImageWrapper = styled.div`
 `
 
 
-const NameWrapper = styled.p`
-
-    text-align: center;
-    letter-spacing: 0px;
-    color: ${props.active ? '#E2E4E6' : '#19293A'};
+const NameWrapper = styled.h6`
 
 
-    &:first-line {
-        padding-top: 16px;
-        font: normal normal bold 21px/38px Open Sans;
-        color: ${props.active ? '#19293A' : '#E2E4E6'};
-    
-  }
-
-    &:hover  {
-        animation: ${nameAnimationRule};
-    }
 `
 
 
     return (
         <RefCardWrapper>
             <RefCardShape onClick={()=>{alert('clicked!')}}>
-                    <TextBox >{props.text}</TextBox>
-                <DisplayImageWrapper>
+                    <p >{props.text}</p>
+
                     <DisplayImage src={props.image} alt="display-image" />
-                </DisplayImageWrapper>
+
                 <NameWrapper>{props.name}<br />{props.job}</NameWrapper>
             </RefCardShape>
     </RefCardWrapper>

@@ -8,8 +8,9 @@ import RefCard from './RefCard'
 const PageSixWrapper = styled.div `
   position: inherit; 
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   padding-right: 300px;
+  padding-top: 50px;
 ` 
 
 const HeadingWrapper = styled.div `
@@ -20,10 +21,13 @@ const HeadingWrapper = styled.div `
 const RefCardWrapper = styled.div `
   display: flex;
   padding-left: 226px;
+  padding-top: 50px;
 ` 
 
 const ButtonWrapper = styled.div `
   display: flex;
+  position: relative;
+  left: 0;
   justify-content: center;
   align-items: center;
   height: 200px;
@@ -83,17 +87,17 @@ const Button = styled.button `
         activeButton={activeButton[2]}
         name={"Mary Jane"}
         job={"CEO, Design Matters"}
-        image={"testimonial_face01.png"}
+        image={"testimonial_face02.png"}
         text={"We needed a creative and unique brand which could compete against established products. Digital Spaniel delivered in spades and we’ve seen a huge response to the product launch."}
         /> 
     </RefCardWrapper >
-    <ButtonWrapper >
+  
+      </PageSixWrapper>
+      <ButtonWrapper >
         <Button onClick={()=>{setActiveButton([!activeButton[0], false, false])}}/> 
         <Button onClick={()=>{setActiveButton([false, !activeButton[1], false])}}/> 
         <Button onClick={()=>{setActiveButton([false, false, !activeButton[2]])}}/> 
     </ButtonWrapper >
-  
-      </PageSixWrapper>
     </>
   )
 }

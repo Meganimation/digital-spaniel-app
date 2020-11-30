@@ -34,7 +34,6 @@ function checkHeading(heading) {
   function splitHeading(heading) {
     let x = heading.split(" // ")
     let y = x[0] + <br /> + x[1]
-    debugger
     return (
       <>
       {x[0]} <br />
