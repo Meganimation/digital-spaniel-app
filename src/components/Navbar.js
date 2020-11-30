@@ -4,10 +4,11 @@ import CardLinkComponent from './CardLinkComponent'
 import { device } from './Breakpoints';
 import HamburgerMenu from './HamburgerMenu'
 import { FaHamburger } from 'react-icons/fa';
+import $ from 'jquery';
 
 
 
-let Ham = (<svg viewBox="0 0 100 80" width="40" height="40">
+let Ham = (<svg viewBox="50 0 50 80" width="80" height="40">
   <rect width="100" height="20"></rect>
   <rect y="30" width="100" height="20"></rect>
   <rect y="60" width="100" height="20"></rect>
@@ -59,13 +60,13 @@ const Nav = styled.nav `
 
 
     section {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         z-index: 999;
         border: 0px;
         padding-top: 3vh;
-        padding-right: 10vh;
+        padding-right: 1vh;
         fill: white;
     }
 
@@ -107,9 +108,6 @@ const Nav = styled.nav `
         }
 
      }
-
-
-
       
    }
 `

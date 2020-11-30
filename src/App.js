@@ -49,6 +49,8 @@ const AppWrapper = styled.div `
 
 function App(name) {
 
+
+
   return (
     <AppWrapper>
     <GlobalStyle />

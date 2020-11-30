@@ -36,7 +36,8 @@ function checkHeading(heading) {
     let y = x[0] + <br /> + x[1]
     return (
       <>
-      {x[0]} <br />
+      {x[0]} 
+      <br />
       {x[1]}
       </>
       
