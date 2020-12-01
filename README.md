@@ -1,80 +1,106 @@
-# Getting Started with Create React App
+<h2> Digital Spaniel </h2> 
 
-<p> started with basic architecture, chose not to use grids on basis that i have not used them before and do not want a potential roadblock down the road or risk not being able to talk about my process
--began blocking out each component by seperating the heroes into pages
--then added basis positioning
--added background colors to make life easier
--created nav bar with right and left float, not yet stickied
--added psuedo selectors to links before i forget to
--added a name context hook just because. 
--began creating cards for multi use, including some embedded css such as padding
--started adding media queries
--XD sheet specifies some hard pixels for largeDesktop, which makes anything below largeDesktop look weird.
--decided to match the specs for largeDesktop and then edit them for laptop, so the UX designer doesn't feel ignored
--why do I always have issues with getting the typeface right?
--added breakpoints and interpolated them, making viewports easier to manage
--started passing props into the card component
--imported images into public and direct, need to learn how to lazy-load
--perhaps i should build a loading screen?
--seperated card and title so Heading can be reused more
--adding in flipcard images but no text yet
--added basic carousel with data, buttons needs adding
--downloaded and embedded appropriate fonts
--started matching font weights
--added animated underline for links
--added a collage using flexbox
--created seperate card components for testemonials with info to pass in as props
--animated cards
--added state functionality to buttons
--a lot of flip-flop css
--need to add themese
--created collage
--tried using refs but they wont work on styled components for some reason
--added margins
--added animations to links, cards, carousel, etc
--removed skeleton bg colors
--added padding
--adding state functionalities
--began css for various media queries
--created hamburger menu logic
--styled hamburger using svgs
--added opacity and positioning animation for menu
--created function to seperate heading into two lines if need be
--added router
+<small> Version 0.1.0 </small>
+<br /><br />
+<h3> Installation </h3>
+<li> Clone this repo </li>
+<li> <code>cd</code> into the main directory</li>
+<li> In the terminal, run <code>"npm i && npm start"</code></li>
+<br /><br />
 
+<h3> Implementation Timeline </h3>
+<br />
+<ul> Started with basic architecture</ul>
+<ul>Began blocking out each component by seperating the heroes into pages, components into blocks, images to grid, etcetc</ul>
+<ul>Added dimensions for permimeter of each page</ul>
+<ul>Then added basic positioning, relative to the previous segment</ul>
+<ul>Added background colors to make life easier</ul>
+<ul>Began blocking out inner-components</ul>
+<ul>Created nav bar with right and left float, not yet stickied</ul>
+<ul>Added psuedo selectors to links</ul>
+<ul>Added a name context hook just because. </ul>
+<ul>Began creating cards for multi use, including some embedded css such as padding</ul>
+<ul>Started adding media queries</ul>
+<ul>XD sheet specifies some hard pixels for largeDesktop, which makes anything below largeDesktop look weird.</ul>
+<ul>Decided to match the specs for largeDesktop and then edit them for tablet, so the UX designer doesn't feel ignored</ul>
+<ul>Why do I always have issues with getting the typeface right?</ul>
+<ul>Incorporated GlobalStyles</ul>
+<ul>Added breakpoints and interpolated them, making viewports easier to manage</ul>
+<ul>Started passing props</ul>
+<ul>Imported images into public and direct, need to learn how to lazy load</ul>
+<ul>Perhaps I should build a loading screen?</ul>
+<ul>Seperated card component into various other components to be reused</ul>
+<ul>Adding in flipcard images but no text yet</ul>
+<ul>Added basic carousel with data, buttons needs adding</ul>
+<ul>Downloaded and embedded appropriate fonts</ul>
+<ul>Started matching font weights</ul>
+<ul>Added animated underline for links</ul>
+<ul>Added a collage using flexbox</ul>
+<ul>Created seperate card components for testemonials with info to pass in as props</ul>
+<ul>Animated cards using keyframes and state manipulation</ul>
+<ul>Added state functionality to buttons</ul>
+<ul>A lot of flip flop css</ul>
+<ul>Need to add themes</ul>
+<ul>Tried matching buttons to animated cards using the useRef hook but it doesn't seem to like styled components.</ul>
+<ul>Created Collage</ul>
+<ul>Added margins to various pages</ul>
+<ul>Added animations to links, cards, carousel, etc</ul>
+<ul>Removed skeleton background colors</ul>
+<ul>Replaced them with the appropriate housestyle </ul>
+<ul>Added padding</ul>
+<ul>Adding state functionalities</ul>
+<ul>Used props to determine whether a recyclable component requires padding, size changes, etc.</ul>
+<ul>Built a function that makes splittling lines easier, matching the Headline specs.</ul>
+<ul>Created data for carousel and exported.</ul>
+<ul>Began css for various media queries.</ul>
+<ul>Alot of switch cases and ternarys for dynamic CSS.</ul>
+<ul>Switched some functional component declarations.</ul>
+<ul>Added copyright footer</ul>
+<ul>Recycled PageTwo for the final page, including it's embedded NavColumns component.</ul>
+<ul>Most components should have data passing in as props now.</ul>
+<ul>Created hamburger menu logic</ul>
+<ul>Styled hamburger using svg</ul>
+<ul>Added opacity and positioning animation for menu</ul>
+<ul>Imported react-router</ul>
+<ul>Added router and provider.</ul>
+<ul>Created individual Navbar for router, matching css in XD.</ul>
+<ul>Created routes, allowing for multiple tabs</ul>
+<ul>Added secondary test page for router</ul>
+<ul>Coded mutable images</ul>
+<ul>Added Jquery</ul>
+<ul>Created function that detects scrollY specs to determine Navbar positioning</ul>
+<ul>Locked ScrollX</ul>
+<ul>Reduced wrappers</ul>
+<br /><br /><br /><br />
 
+<h3> Problem Solving </h3>
+<br />
+<ul>Navbar - Was originally unsure how to implement a Hamburger without having to re-do all my code. Solved via media querying opacity and z-index.</ul>
+<ul>Heading two-lines - Already knew about using the ::first-line selector to change the first line. But didn't know how to break the string into two lines without having to use JSX. Solved by adding a " // " into where the text is to be broken, and then built an algorithmn to break the string when it comes into contact with the event.</ul>
+<ul>Image rescaling - A better solution would be for me to get more familiar working with images and flex. Was unsure of how to create decent, dynamic collage-like bundles of images that don't require individual positioning. Solved by creating columns, rows, and messing about with auto-height properties and %'s.</ul>
+<ul> Testemonial cards - Couldn't map the navigation buttons to each card as the useRef hooks wouldn't work on styled components. Also couldn't use html ref's as each card was a cloned component with props being passed in. Solved using data id's, state with the data type of an array, and a lot of terniary's and boolean-checks. </ul>
+<ul> Navbar - completely and utterly unsure of how to change the fixed logic without jQuery. Solved using jQuery. </ul>
+<br /><br /><br /><br />
+<h3>Software used for debugging </u3>
+<br />
+<h5>For CSS </h5><p>Using the element inspector in Dev tools to select the section and then live-edit through devtools</p>
+<h5> For Javascript </h5>Debugger, React Dev Tools Add-on, a lot of Console.logging
+<h5> For HTML/JSX </h5><p>Just a good formatter which tends to outline any immediate syntax errors (Prettier for VS Code)</p>
 
+<br /><br /><br /><br />
 
-things I know how to do but might not have time to: 
--themes
--context 
--better naming conventions
--more slide buttons
--lazy loading
-
-
-
-things im unsure about/need to learn more of:
--how to work with images without guessing the css alot (how embarrassing...)
--working with flex grids
--possibly a better way to implement hamburger menu
--how to build a carousel from scratch
--sticky nav with offset (im thinking of adding a function with an event listener that looks out for when window.scrollUp is in effect, then after 500 or so, set position to sticky-top/fixed)
--better planning/architecture (should have used storybook and built via AAA development but I got cheeky and rushed the architect stage)
--best css implementations for large landing pages
--how to stitch each page together
-
-
-notes to mention incase I forget:
-
--device.desktop matches the XD specs and are therefore in px, otherwise other vp's are in vh which arent as accurate, but are more dynamic
--different techniques were used accross the bored, to show the different variations of my dev level and different ways to complete the same task
--my personal thoughts? i do not think this code shows 5 years of dev experience, but I think with more time and planning, i could get close
--i wanted to use storybook but thought against it as I know it is not implemented in this role, this made things a bit difficult/unusual for me, and if i was to redo it, i would have used it
--i had a LOT of fun doing this, but should have been more serious with my naming convenction
--probs could have done better file placement too
-
-
-
-
-</p>
+<h3> Improvements / Things to add </h3>
+<br />
+<ul>Themes (Possibly through useContext, but then wouldn't all the CSS have to be post-loaded?)</ul>
+<ul>Lazy Loading (Was thinking of simply importing the LQ images first, then setting a timeout off 500 or so, and then patching with HQ versions)</ul>
+<ul>Font-family (Genuinley get confused at how fonts work sometimes)</ul>
+<ul>Reduction of verbose CSS (Padding 10 0 10 0px might be quicker to write, but seperating them is easier to read and edit during design phase)</ul>
+<ul>Better naming conventions</ul>
+<ul>More concise parent-child CSS values</ul>
+<ul>Consistent syntax (I have a habit of using both double and single quotes which can look quite messy sometimes) </ul>
+<ul>Grids </ul>
+<ul>Finish Carousel </ul>
+<ul>Finish Flipcards </ul>
+<ul>Better implementation of the sticky-nav (How can it be done without jQuery?) </ul>
+<ul>Don't use 'rcfe' snippet for every component. </ul>
+<ul>Saving all the string data in one file instead of writing them in when passing props (possibly a good way to implement useContext) </ul>
