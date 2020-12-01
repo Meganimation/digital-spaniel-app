@@ -9,6 +9,11 @@
   ];
 
 
+  const RefCardData = [
+    {name: 'test'}
+  ]
+
 
 
 export {CarouselData};
+export {RefCardData};

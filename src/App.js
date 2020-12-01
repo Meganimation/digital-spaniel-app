@@ -10,7 +10,7 @@ import PageFour from './components/PageFour'
 import PageFive from './components/PageFive'
 import PageSix from './components/PageSix'
 import Footer from './components/Footer'
-import { CarouselData }from './components/CarouselData';
+import { CarouselData,  RefCardData }from './components/CarouselData';
 
 
 
@@ -66,7 +66,7 @@ function App(name) {
             <PageThree />
             <PageFour slides={CarouselData}/>
             <PageFive />
-            <PageSix />
+            <PageSix data={RefCardData} />
             <PageTwo title="We’re a brands best friend" text={false} link="Let's Talk" pageTwo={false} />
             <Footer />
     </TestContext.Provider>

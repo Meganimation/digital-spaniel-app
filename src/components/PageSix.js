@@ -92,7 +92,7 @@ function makeActive(e){
         active={activeButton[0]}
         activeButton={activeButton[0]}
         makeActive={makeActive}
-        name={"Paul Simon"}
+        name={props.data.[0].name}
         job={"Founder, MegaCorp"}
         image={"testimonial_face03.png"}
         text={"Working with Digital Spaniel has been a breath of fresh air. Their approach and attitude kept me informed and included from the start. Super pleased with the end results too!"}
