@@ -26,7 +26,7 @@ const PageTwoWrapper = styled.div `
 ` 
 
 const NavWrapper = styled.div`
-padding-left: 20vh;
+  padding-left: 20vh;
 `
 
 

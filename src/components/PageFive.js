@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Heading from './Heading'
-import CardLinkConmponent from './CardLinkComponent'
 import Collage from './Collage'
 import { device } from './Breakpoints';
 
@@ -12,11 +11,9 @@ const PageFiveWrapper = styled.div `
   background: #EDEFF1;
   width: 100%;
   height: 100%;
-
   padding-bottom: 18vh;
 
 ` 
-  
   
 const HeadingWrapper = styled.div `  
   padding-right: 50%;
@@ -31,7 +28,6 @@ const ImageWrapper = styled.div `
   padding-left: 400px;
   }
 `
-  
   
 const LinkWrapper = styled.div ` 
   padding-left: 300px;
@@ -59,9 +55,6 @@ const CollageWrapper = styled.div `
     width: auto;  
   }
 ` 
-
-
-
 
 
 

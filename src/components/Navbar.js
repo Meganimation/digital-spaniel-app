@@ -17,7 +17,7 @@ let Ham = (<svg viewBox="50 0 50 80" width="80" height="40">
 
 
 const LogoWrapper = styled.div `
-display: inline-block;
+    display: inline-block;
 
 @media ${device.laptop} { 
     padding-left: 20vh;
@@ -37,16 +37,14 @@ display: inline-block;
 
 
 const Nav = styled.nav `
-float: right;
-padding-top 34px;
-text-align: center;
-width: 50%;
+    float: right;
+    padding-top 34px;
+    text-align: center;
+    width: 50%;
 
 
 
 @media ${device.laptop} { 
-
-
    section {
        position: fixed;
        top: 0;
@@ -65,9 +63,7 @@ width: 50%;
    }
 
 
-
 @media ${device.desktop} { 
-
    section {
        position: absolute;
        z-index: -999;
@@ -106,11 +102,6 @@ const LogoImg = styled.img `
 `
 
 
-
-
-
-
-
 const Button = styled.section`
 background: none;
 
@@ -129,20 +120,19 @@ function Navbar() {
     const [position, setPosition] = useState('fixed;')
 
     const NavbarWrapper = styled.div `
-position: ${position};
-top: 0;
-width: 100%;
+    position: ${position};
+    top: 0;
+    width: 100%;
 
 
-@media ${device.laptop} { 
-    padding-right: 10vh;
-}
+    @media ${device.laptop} { 
+        padding-right: 10vh;
+    }
 
-@media ${device.desktop} { 
-    padding-right: 150px;
+    @media ${device.desktop} { 
+        padding-right: 150px;
     background-color:rgba(0, 0, 0, 0.1);
  }
-
 ` 
 
  
@@ -151,48 +141,44 @@ var lastScrollTop = 0;
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
         var st = $(this).scrollTop();
-
         if ((st > '1300') && (menu == false)){
             return setPosition('relative;')
-
- 
-        } if ((st < lastScrollTop) && (menu == false)) {
+        } 
+        if ((st < lastScrollTop) && (menu == false)) {
             console.log(st)
             return setPosition('fixed;')
         }
         lastScrollTop = st;
-    
     });
 
-
-    const showMenu=()=>{
+const showMenu=()=>{
     if (menu == false) {
         return null
     }
+    
     else return (
             <>
-            <HamburgerMenu />
+                <HamburgerMenu />
             </>
             )
     }
 
 
-    return (
-<NavbarWrapper>
-            <LogoWrapper>
-                <LogoImg src="logo.png"  alt="logo"/> 
-            </LogoWrapper>
-    <Nav> 
-        <CardLinkComponent href="#services" link="Services" /> 
-        <CardLinkComponent href="#work" link="Work" /> 
-        <CardLinkComponent href="#about" link="About" /> 
-        <CardLinkComponent href="#blog" link="Blog" />
-        <CardLinkComponent href="#contact" link="Contact" /> 
 
+    return (
+            <NavbarWrapper>
+                <LogoWrapper>
+                    <LogoImg src="logo.png"  alt="logo"/> 
+                </LogoWrapper>
+            <Nav> 
+                <CardLinkComponent href="#services" link="Services" /> 
+                <CardLinkComponent href="#work" link="Work" /> 
+                <CardLinkComponent href="#about" link="About" /> 
+                <CardLinkComponent href="#blog" link="Blog" />
+                <CardLinkComponent href="#contact" link="Contact" /> 
         <Button onClick={()=>[setMenu(!menu)]}>{Ham}</Button>  
         {showMenu()}
-
-    </Nav>
+            </Nav>
 </NavbarWrapper>
     )
 }

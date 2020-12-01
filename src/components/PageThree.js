@@ -72,10 +72,6 @@ function PageThree() {
       </HeadingWrapper>
     <PageThreeNav />
     <br/>
-        {/* <a href="#All">All</a>
-        <a href="#Branding">Branding</a>
-        <a href="#WebDesign">Web Design</a>
-        <a href="#DigitalMarketing">Digital Marketing</a> */}
 
         <Router>
       <>
@@ -91,8 +87,6 @@ function PageThree() {
             </Switch>
       </>
     </Router>
-
-
         <CardLinkComponent link={"See all work"} padding={true} />
   </PageThreeWrapper>
   )

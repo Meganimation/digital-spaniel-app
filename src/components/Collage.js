@@ -20,16 +20,14 @@ const Item = styled.img`
   @media ${device.laptop} { 
     max-width: 90%;
     height: auto;
-
   }
 
   @media ${device.desktop} { 
     max-width: 100%;
     height: auto;  
 }
-
 `;
-  
+ 
   
 const Row = styled.div`
   &::after {
@@ -64,7 +62,6 @@ const LinkWrapper = styled.div `
   @media ${device.laptop} { 
   padding-top: 10vh;
   text-align: right;
-
   }
 
   @media ${device.desktop} { 

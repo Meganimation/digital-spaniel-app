@@ -111,22 +111,20 @@ const RefCardShape = styled.div`
         max-width: 20%;
     }
 
-  &:hover{
-    box-shadow: 0px 20px 40px #19293A80;
-      cursor: pointer;
-      animation: ${borderAnimationRule};
+     &:hover{
+        box-shadow: 0px 20px 40px #19293A80;
+        cursor: pointer;
+        animation: ${borderAnimationRule};
 
   p {
-    animation: ${textAnimationRule};
+        animation: ${textAnimationRule};
   }
 
   h6 {
-    animation: ${nameAnimationRule};
-    color: ${props.active ? '#E2E4E6' : '#19293A'};
+        animation: ${nameAnimationRule};
+        color: ${props.active ? '#E2E4E6' : '#19293A'};
   }
-
-
-  }
+}
 
 
 
@@ -137,9 +135,7 @@ const RefCardShape = styled.div`
     font-size: ${!props.active ? '25px' : '19px'};
     font-weight: 100;
     font: normal normal 17px/38px Open Sans;
-
     line-height: 1.6;
-
 
     &:first-line {
         padding-top: 16px;
@@ -151,14 +147,14 @@ const RefCardShape = styled.div`
 
 
 @media ${device.desktop} { 
-    padding: 1px;
-    background: ${props.active ? '#19293A' : '#E2E4E6'};
-    height: ${props.active ? '748px;' : '663px;'};
-    width: ${props.active ? '536px;' : '434px;'};
-    box-shadow: 0px 0px 20px #19293A80;
-    border-radius: 10px;    
-    margin-top: auto;
-    margin-bottom: auto;
+   padding: 1px;
+   background: ${props.active ? '#19293A' : '#E2E4E6'};
+   height: ${props.active ? '748px;' : '663px;'};
+   width: ${props.active ? '536px;' : '434px;'};
+   box-shadow: 0px 0px 20px #19293A80;
+   border-radius: 10px;    
+   margin-top: auto;
+   margin-bottom: auto;
 
     p {
         font: italic normal 600 25px Open Sans;
@@ -177,21 +173,19 @@ const RefCardShape = styled.div`
     }
 
   &:hover{
-    box-shadow: 0px 20px 40px #19293A80;
-      cursor: pointer;
-      animation: ${borderAnimationRule};
+        box-shadow: 0px 20px 40px #19293A80;
+        cursor: pointer;
+        animation: ${borderAnimationRule};
 
   p {
-    animation: ${textAnimationRule};
+        animation: ${textAnimationRule};
   }
 
   h6 {
-    animation: ${nameAnimationRule};
-    color: ${props.active ? '#E2E4E6' : '#19293A'};
+        animation: ${nameAnimationRule};
+        color: ${props.active ? '#E2E4E6' : '#19293A'};
   }
-
-
-  }
+}
 
 
 
@@ -202,34 +196,14 @@ const RefCardShape = styled.div`
     font-size: ${!props.active ? '25px' : '19px'};
     font-weight: 100;
     font: normal normal 17px/38px Open Sans;
-
     line-height: 1.6;
-
 
     &:first-line {
         padding-top: 16px;
         font-weight: 800;
     }
-
 }
-
 `
-
-
-// const TextBox = styled.p`
-//     font: italic normal 600 30px Open Sans;
-//     color: ${props.active ? '#E2E4E6' : '#19293A'};
-//     font-size: ${props.active ? '30px;' : '25px;'};
-//     text-align: center;
-//     padding-left: 60px;
-//     padding-right: 60px;
-//     padding-top: ${props.active ? '64px;' : '64px;'};
-//     letter-spacing: 0px;
-
-// &:hover{
-//       animation: ${textAnimationRule};
-//     }
-// `
 
 const DisplayImage = styled.img`
 `
@@ -243,8 +217,6 @@ const NameWrapper = styled.h6`
 
 
 `
-
-
     return (
         <RefCardWrapper>
             <RefCardShape onClick={(e)=>props.makeActive(e)}>

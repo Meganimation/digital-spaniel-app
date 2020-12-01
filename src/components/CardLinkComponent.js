@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { device } from './Breakpoints';
 
 
 
@@ -35,7 +36,7 @@ function CardLinkComponent(props) {
     return (
     
         <>
-                <CardLink href='#badLink'>{props.link}</CardLink>
+            <CardLink href='#badLink'>{props.link}</CardLink>
         </>
     )
 }

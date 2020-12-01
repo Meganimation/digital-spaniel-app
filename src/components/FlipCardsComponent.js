@@ -26,12 +26,10 @@ const RowTwo = styled.div`
 @media ${device.laptop} { 
     padding-left: 20vh;
     padding-right: 20vh;
-  
    }
 
    @media ${device.desktop} { 
     padding-left: 300px;
-
     padding-bottom: 78px;
 }
 `
@@ -48,7 +46,7 @@ const Image = styled.img`
    @media ${device.desktop} { 
     height: auto;
     width: auto;
-}
+    }
 
   &:hover{
     opacity: 20%;

@@ -56,7 +56,6 @@ const CardWrapper = styled.div `
     }  
 ` 
 
-      
 
 
 function PageOne() {
@@ -74,7 +73,6 @@ function PageOne() {
                     />
                 </CardWrapper>
             </RightSide>
-
             <LeftSide>
             <img src="SpanielLQ.png"  alt="spanielimage" /> 
             </LeftSide>

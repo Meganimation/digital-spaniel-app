@@ -18,7 +18,7 @@ const slideIn = keyframes `
 `
 
 const HamburgerMenuWrapper = styled.div`
-opacity: 90%;
+  opacity: 90%;
   position: fixed;
   top: 0vh;
   right: 00px;
@@ -27,7 +27,6 @@ opacity: 90%;
   background: #19293A;
   color: ##E2E4E6;
   animation: ${slideIn}  0.2s linear; 
-  
   
   ul a {
           position: relative;

@@ -25,8 +25,7 @@ const HeadingWrapper = styled.div `
 ` 
 
 const HeadingTitle = styled.h1 `
-
-font-size: 48px;
+    font-size: 48px;
 ` 
 
 
@@ -36,11 +35,10 @@ function checkHeading(heading) {
     let y = x[0] + <br /> + x[1]
     return (
       <>
-      {x[0]} 
-      <br />
-      {x[1]}
+        {x[0]} 
+          <br />
+        {x[1]}
       </>
-      
     )
   }
   

@@ -12,13 +12,13 @@ const Row = styled.div`
     padding-left: 1vh;
     padding-right: 30vh; 
     line-height: 1.3;
-  }
+    }
 
   @media ${device.desktop} { 
     padding-left: 77px;
     padding-right: 228px; 
     line-height: 1.5;
-}
+    }
 
   &::after {
   content: ""
@@ -31,7 +31,6 @@ const Row = styled.div`
 const Column = styled.div`
   float: right;
   width ${(props.pageTwo ? "25%" : "17%")}; 
-
   color: #19293A;
   font-size: 21px;
   letter-spacing: 2.1px;

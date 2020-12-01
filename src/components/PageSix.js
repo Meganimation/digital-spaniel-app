@@ -45,12 +45,11 @@ const ButtonWrapper = styled.div `
 ` 
 
 
-
-  
 const PageSix= (props) => {
 
 
 const [activeButton, setActiveButton] = React.useState([false, false, false])
+
 
 const Button = styled.button `
   text-decoration: none;
@@ -73,14 +72,11 @@ function makeActive(e){
       switch (id) {   
       case 1:
         return (setActiveButton([!activeButton[0], false, false]));
-      
       case 2:
-        return (setActiveButton([false, !activeButton[1], false]));
-      
+        return (setActiveButton([false, !activeButton[1], false])); 
       case 3:
         return (setActiveButton([false, false, !activeButton[2]]));
       }
-
 }
 
   return (
@@ -122,7 +118,6 @@ function makeActive(e){
         text={"We needed a creative and unique brand which could compete against established products. Digital Spaniel delivered in spades and we’ve seen a huge response to the product launch."}
         /> 
     </RefCardWrapper >
-  
       </PageSixWrapper>
       <ButtonWrapper >
         <Button onClick={()=>{setActiveButton([!activeButton[0], false, false])}}/> 

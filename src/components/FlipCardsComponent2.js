@@ -20,12 +20,10 @@ const Image = styled.img`
 `
 
 const Grid = styled.div`
-position: absolute;
-width: 100%;
-height: 80%;
-padding-left: 20vh;
-
-
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  padding-left: 20vh;
   `
 
   const Row = styled.div`
@@ -45,7 +43,7 @@ padding-left: 20vh;
 function FlipCardsComponent2() {
     return (
         <>
-          <Grid >
+          <Grid>
             <Row>
               <TextContainer>
           This is a page accessed via the power of React-Router!

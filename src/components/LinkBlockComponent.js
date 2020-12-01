@@ -38,7 +38,6 @@ const LinkBlockHeading = styled.h3`
 font-family: normal normal bold 21px/38px ITC Avant Garde Gothic Pro;
 `
 
-
 function LinkBlockComponent(props) {
     return (
         <>

@@ -4,7 +4,6 @@ import BodyText from './BodyText'
 import Heading from './Heading'
 
 
-
 const defaultProps = {
 	slides : []
 };

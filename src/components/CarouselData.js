@@ -8,4 +8,7 @@
     { src: "socks.png", alt: 'Food District' }
   ];
 
+
+
+
 export {CarouselData};
