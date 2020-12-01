@@ -10,12 +10,13 @@ const FlipCardsComponentWrapper = styled.div`
 const RowOne = styled.div`
 
     @media ${device.laptop} { 
+    padding-top: 3vh;
     padding-left: 20vh;
     padding-right: 20vh;
    }
 
    @media ${device.desktop} { 
-    padding-left: 20vh;
+    padding-left: 300px;
    }
 
 `
@@ -29,7 +30,7 @@ const RowTwo = styled.div`
    }
 
    @media ${device.desktop} { 
-    padding-left: 20vh;
+    padding-left: 300px;
 
     padding-bottom: 78px;
 }
